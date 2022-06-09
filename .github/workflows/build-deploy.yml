@@ -50,6 +50,6 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
        #Copy the files from build folder to the S3 bucket
       - name: Deploy to S3
-        run: aws s3 cp react-github-actions-build s3://$S3_BUCKET_NAME/ --recursive
+        run: aws s3 cp react-github-actions-build s3://upload-to-aws-s3/ --recursive
       - name: List the directory
         run: ls -lrt
